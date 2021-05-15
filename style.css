@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('./fonts/PulpDisplay-Light.ttf');
+  src: url('./fonts/PulpDisplay-Light.ttf') format('embedded-opentype'),
+    url('./fonts/PulpDisplay-Light.ttf') format('svg'),
+    url('./fonts/PulpDisplay-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('./fonts/PulpDisplay-Regular.ttf');
+  src: url('./fonts/PulpDisplay-Regular.ttf') format('embedded-opentype'),
+    url('./fonts/PulpDisplay-Regular.ttf') format('svg'),
+    url('./fonts/PulpDisplay-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('./fonts/PulpDisplay-Medium.ttf');
+  src: url('./fonts/PulpDisplay-Medium.ttf') format('embedded-opentype'),
+    url('./fonts/PulpDisplay-Medium.ttf') format('svg'),
+    url('./fonts/PulpDisplay-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('./fonts/PulpDisplay-Bold.ttf');
+  src: url('./fonts/PulpDisplay-Bold.ttf') format('embedded-opentype'),
+    url('./fonts/PulpDisplay-Bold.ttf') format('svg'),
+    url('./fonts/PulpDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+  font-family: 'PulpDisplay';
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00b141;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #00b141;
+}
+
+header {
+  background-color: #0D0F14;
+}
+
+body {
+  background-color: #292A2E;
+}
+
+nav {
+  padding: 20px 0 !important;
+  background-color: #13161C;
+  border-radius: 0px 0px 20px 20px;
+}
+
+nav .logo {
+  color: #fff;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+a.nav-link.active {
+  color: #00b141 !important;
+}
+
+nav a.nav-link {
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 18px !important;
+  color: #fff !important;
+}
+
+
+
+.hero {
+  background-image: url('./imgs/hero_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  margin-bottom: -120px;
+}
+
+.hero p {
+  font-size: 24px;
+  padding-bottom: 100px !important;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.39em;
+  line-height: 37px;
+  color: #00b141;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 66px;
+  line-height: 79px;
+  color: #fff;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 79px;
+  color: #fff;
+}
+
+p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 48px;
+  color: #baced4;
+}
+
+.btn-primary {
+  border-radius: 4px;
+  background: #00b141;
+  box-shadow: none;
+  border: none;
+  padding: 13px 40px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #e8eff7;
+}
+
+.btn-primary:hover {
+  background-color: #22cc60;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  background-color: #13161C;
+}
+
+.card .card-body {
+  padding: 40px;
+}
+
+.card .card-body .card-title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+}
+
+.card .card-body .card-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.card .card-img-top {
+  height: 120px;
+}
+
+.card .card-left {
+  background-image: url('./imgs/card_left.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.card .card-right {
+  background-image: url('./imgs/card_right.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+}
+
+footer {
+  background-color: #13161C;
+  padding: 10px 0;
+}
+
+footer .reservados {
+  font-weight: normal;
+  font-size: 18px;
+  color: #fff;
+}
+
+.icons a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.score {
+  min-height: 81vh;
+}
+
+thead {
+  background: #13161C;
+  color: #B3B8BD;
+}
+
+.table thead th,
+td {
+  border: none !important;
+}
+
+.table td {
+  color: #C5C5C5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #00B141;
+}
+
+
+.table-hover tbody tr:hover td {
+  color: #1D2025 !important;
+}
+
+
+.table-radius-left {
+  border-radius: 10px 0px 0px 10px !important;
+}
+
+.table-radius-right {
+  border-radius: 0px 10px 10px 0px !important;
+}
