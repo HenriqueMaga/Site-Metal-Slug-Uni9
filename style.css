@@ -134,6 +134,35 @@ p {
   color: #baced4;
 }
 
+input {
+  background-color: #13161C !important;
+  border: none !important;
+  box-shadow: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 350px;
+  font-size: 15px;
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+  padding-left: 5px;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  padding-left: 5px;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  padding-left: 5px;
+}
+
+:-ms-input-placeholder {
+  padding-left: 5px;
+}
+
 .btn-primary {
   border-radius: 4px;
   background: #00b141;
@@ -145,8 +174,25 @@ p {
   color: #e8eff7;
 }
 
+.btn-primary-login {
+  border-radius: 4px;
+  background: #00b141;
+  box-shadow: none;
+  border: none;
+  padding: 7px 154px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #e8eff7;
+}
+
+
 .btn-primary:hover {
   background-color: #22cc60;
+}
+
+.btn-primary-login:hover {
+  background-color: #22cc60;
+  color: #e8eff7;
 }
 
 .card {
@@ -245,4 +291,50 @@ td {
 
 .table-radius-right {
   border-radius: 0px 10px 10px 0px !important;
+}
+
+.login {
+  background-image: url('./imgs/bg_login.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login label {
+  font-family: "Pulp Display";
+  font-weight: normal;
+  font-size: 18px;
+  color: #b3bbc5;
+
+}
+
+.login input {
+  font-family: "Pulp Display";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #c1c8d8;
+  padding: 28px 20px !important;
+}
+
+.login input:focus {
+  color: #fff;
+}
+
+.login p {
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  color: #8C98A9;
+}
+
+.login p a{
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  color: #00b141;
+}
+
+.pass_style {
+  font-size: 3rem !important;
+  letter-spacing: 15px;
 }
