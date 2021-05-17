@@ -39,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
       <div class="container">
         <a class="mt-1" href="index.php">
-          <p class="p-0 m-0 logo">Metal Slug Uni9</p>
+          <div class="p-0 m-0 logo">Metal Slug Uni9</div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
