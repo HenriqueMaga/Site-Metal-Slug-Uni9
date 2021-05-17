@@ -35,11 +35,11 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="time_rank.html">Tempo</a>
+              <a class="nav-link active" href="time_rank.php">Tempo</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="score_rank.html">Score</a>
+              <a class="nav-link" href="score_rank.php">Score</a>
             </li>
 
             <?php 
