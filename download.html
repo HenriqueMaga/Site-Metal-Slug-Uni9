@@ -18,16 +18,16 @@
 
 <body>
   <?php
-     session_start();
+    session_start();
 
-     function finalizarSessao() {
-       session_destroy();
-       header("location: ./login.php");
-     }
+    function finalizarSessao() {
+      session_destroy();
+      header("location: ./login.php");
+    }
 
-     if (isset($_GET['sair'])) {
-       finalizarSessao();
-     }
+    if (isset($_GET['sair'])) {
+      finalizarSessao();
+    }
   ?>
   <!-- Navigation -->
   <header>
@@ -47,14 +47,14 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="download.php">Download</a>
+              <a class="nav-link active" href="download.php">Download</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="time_rank.php">Tempo</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link active" href="score_rank.php">Score</a>
+              <a class="nav-link" href="score_rank.php">Score</a>
             </li>
             
             <?php 
@@ -83,12 +83,11 @@
     <div class="container">
       <div class="row py-5">
         <div class="col-md-8">
-          <h6>SCORE RANKING</h6>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat.</p>
+          <h6>Baixe agora mesmo!</h6>
+          <p>Desafie seus amigos, obtenha os melhores rankings! Divirta-se nessa releitura simplificada do clássico Metal Slug</p>
         </div>
       </div>
-
+      <!--
       <div class="row">
         <div class="col-md">
           <table class="table table-hover">
@@ -111,7 +110,20 @@
           </table>
         </div>
       </div>
+      -->
+      <?php 
+        if($_SESSION["id"] == null){
+          echo '<div class="col-md-8"><p>Para baixar você deve estar logado. Crie um usuário ou entre agora mesmo</p></div> ';
+        }
+      ?>
+      
+      <?php
 
+        if($_SESSION["id"] != null){
+          echo '<button type="submit" id="sendlogin" class="btn btn-primary w-100">Download</button>' ;
+        }
+      ?>
+      
       <div class="row py-5">
         <div class="col-md-8">
           <h2>Como funciona o score?</h2>

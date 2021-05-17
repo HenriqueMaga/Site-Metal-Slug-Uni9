@@ -17,6 +17,18 @@
 </head>
 
 <body>
+  <?php
+     session_start();
+
+     function finalizarSessao() {
+       session_destroy();
+       header("location: ./login.php");
+     }
+
+     if (isset($_GET['sair'])) {
+       finalizarSessao();
+     }
+  ?>
   <!-- Navigation -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
@@ -33,6 +45,9 @@
             <li class="nav-item">
               <a class="nav-link" href="index.php">Página inicial
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="download.php">Download</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="time_rank.php">Tempo</a>
