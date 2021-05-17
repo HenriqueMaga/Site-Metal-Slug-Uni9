@@ -18,6 +18,10 @@
    <?php
      session_start();
 
+     if ($_SESSION["id"] != null) {
+      header("location: ./index.php");
+    }
+
      function finalizarSessao() {
        session_destroy();
        header("location: ./login.php");
