@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="pt-br">
 
 <head>
@@ -15,11 +15,58 @@
 </head>
 
 <body class="login">
+  <?php
+     session_start();
+   
+  ?>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+      <div class="container">
+        <a class="mt-1" href="index.php">
+          <p class="p-0 m-0 logo">Metal Slug Uni9</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">PÃ¡gina inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="time_rank.html">Tempo</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="score_rank.html">Score</a>
+            </li>
+
+            <?php 
+              if($_SESSION["id"] == null){
+                echo '<li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>';
+              }
+            ?>
+
+            <?php
+
+              if($_SESSION["id"] != null){
+                echo '<li class="nav-item"><a class="nav-link">Bem vindo, '.$_SESSION["name"]. '</a></li>' ;
+              }
+            ?>
+        
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
 
   <div class="container">
     <!-- o style height 100vh define uma altura para a tela, assim o align-items-center funciona e centraliza na vertical -->
-    <div class="row justify-content-center align-items-center" style="height:100vh">
+    <div class="row justify-content-center align-items-center" style="height:90vh">
       <div class="col-4">
         <form action="./db/site_autenticar.php"  method="post" autocomplete="off">
           <h2 class="text-center">Login</h2>
@@ -38,4 +85,4 @@
     </div>
   </div>
 </body>
-</html>
+</html>	

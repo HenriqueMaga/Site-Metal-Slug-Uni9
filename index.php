@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="pt-br">
 
 <head>
@@ -13,11 +13,15 @@
 </head>
 
 <body>
+  <?php
+     session_start();
+   
+  ?>
   <!-- Navigation -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
       <div class="container">
-        <a class="mt-1" href="index.html">
+        <a class="mt-1" href="index.php">
           <p class="p-0 m-0 logo">Metal Slug Uni9</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -27,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Página inicial
+              <a class="nav-link active" href="index.php">PÃ¡gina inicial
               </a>
             </li>
             <li class="nav-item">
@@ -37,6 +41,20 @@
             <li class="nav-item">
               <a class="nav-link" href="score_rank.html">Score</a>
             </li>
+
+            <?php 
+              if($_SESSION["id"] == null){
+                echo '<li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>';
+              }
+            ?>
+            
+            <?php
+
+              if($_SESSION["id"] != null){
+                echo '<li class="nav-item"><a class="nav-link">Bem vindo, '.$_SESSION["name"]. '</a></li>' ;
+              }
+            ?>
+            
          
           </ul>
         </div>
@@ -48,9 +66,9 @@
     <div class="container">
       <div class="row py-5">
         <div class="col-lg-6 py-5">
-          <h6>O Desafio está Lançado!</h6>
+          <h6>O Desafio estÃ¡ LanÃ§ado!</h6>
           <h1 class="pt-2">Metal Slug - Uni9 Edition</h1>
-          <p class="pt-4">Prove o seu valor nessa versão elaborada para o projeto de Jogos Digitais da Uninove!</p>
+          <p class="pt-4">Prove o seu valor nessa versÃ£o elaborada para o projeto de Jogos Digitais da Uninove!</p>
         </div>
       </div>
     </div>
@@ -64,7 +82,7 @@
             <div class="card-img-top card-left"></div>
             <div class="card-body">
               <h5 class="card-title">Descubra os Melhores</h5>
-              <p class="card-text">Analise as classficações, esteja entre os campeões!</p>
+              <p class="card-text">Analise as classficaÃ§Ãµes, esteja entre os campeÃµes!</p>
               <a href="score_rank.html" class="btn btn-primary">Ver ranking</a>
             </div>
           </div>
@@ -73,8 +91,8 @@
           <div class="card">
             <div class="card-img-top card-right"></div>
             <div class="card-body">
-              <h5 class="card-title">Os durões vivem mais!</h5>
-              <p class="card-text">Veja os jogadores que aguentaram mais</p>
+              <h5 class="card-title">Os durÃµes vivem mais!</h5>
+              <p class="card-text">Veja os jogadores que aguentaram mais tempo</p>
               <a href="time_rank.html" class="btn btn-primary">Ver ranking</a>
             </div>
           </div>
@@ -90,11 +108,11 @@
           <h2>Sobre o projeto</h2>
           <p>
             Esse projeto visa aplicar todos os conhecimentos desenvolvidos ao longo do semestre, que incluem as materias de
-            Jogos Digiatis, Computação Gráfica e Processamento de Imagens, Programação Web e Qualidade de Software.
+            Jogos Digiatis, ProgramaÃ§Ã£o Web, ComputaÃ§Ã£o GrÃ¡fica e Processamento de Imagens e Qualidade de Software.
           </p>
           <p>
-            O jogo foi desenvolvido usando a Engine do Godot, e tem a proposta de recriar parcialmente a experiência do clássico Metal Slug,
-            utilizando elementos do original, remodelados por nós.
+            O jogo foi desenvolvido usando a Engine do Godot, e tem a proposta de recriar parcialmente a experiÃªncia do clÃ¡ssico Metal Slug,
+            utilizando elementos do original, remodelados por nÃ³s.
           </p>
         </div>
         <div class="col-md-6 align-self-center">
@@ -126,3 +144,4 @@
   </footer>
 </body>
 </html>
+		
