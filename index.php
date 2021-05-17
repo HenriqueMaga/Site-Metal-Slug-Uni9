@@ -17,7 +17,15 @@
 <body>
   <?php
      session_start();
-   
+
+     function finalizarSessao() {
+       session_destroy();
+       header("location: ./login.php");
+     }
+
+     if (isset($_GET['sair'])) {
+       finalizarSessao();
+     }
   ?>
   <!-- Navigation -->
   <header>
@@ -54,7 +62,7 @@
 
               if($_SESSION["id"] != null){
                 echo '<li class="nav-item"><a class="nav-link">Bem vindo, '.$_SESSION["name"]. '</a></li>' ;
-                echo '<li class="nav-item"><a class="nav-link">Sair</a></li>' ;
+                echo '<li class="nav-item"><a class="nav-link" href="index.php?sair=true" >Sair</a></li>' ;
               }
             ?>
             
