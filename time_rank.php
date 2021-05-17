@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="pt-br">
 
 <head>
@@ -19,7 +19,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
       <div class="container">
-        <a class="mt-1" href="index.html">
+        <a class="mt-1" href="index.php">
           <p class="p-0 m-0 logo">Metal Slug</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Página inicial
+              <a class="nav-link" href="index.php">Página inicial
               </a>
             </li>
             <li class="nav-item">
@@ -39,6 +39,20 @@
             <li class="nav-item">
               <a class="nav-link" href="score_rank.html">Score</a>
             </li>
+
+            <?php 
+              if($_SESSION["id"] == null){
+                echo '<li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>';
+              }
+            ?>
+            
+            <?php
+
+              if($_SESSION["id"] != null){
+                echo '<li class="nav-item"><a class="nav-link">Bem vindo, '.$_SESSION["name"]. '</a></li>' ;
+                echo '<li class="nav-item"><a class="nav-link" href="index.php?sair=true" >Sair</a></li>' ;
+              }
+            ?>
 
           </ul>
         </div>
