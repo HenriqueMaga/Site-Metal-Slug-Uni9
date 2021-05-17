@@ -51,6 +51,9 @@
               <a class="nav-link" href="index.php">Página inicial</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="download.php">Download</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="time_rank.html">Tempo</a>
             </li>
             

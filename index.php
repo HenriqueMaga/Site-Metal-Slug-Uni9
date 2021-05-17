@@ -45,6 +45,9 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="download.php">Download</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="time_rank.php">Tempo</a>
             </li>
             
