@@ -81,18 +81,21 @@
     <!-- o style height 100vh define uma altura para a tela, assim o align-items-center funciona e centraliza na vertical -->
     <div class="row justify-content-center align-items-center" style="height:90vh">
       <div class="col-4">
-        <form action="./db/site_autenticar.php"  method="post" autocomplete="off">
-          <h2 class="text-center">Login</h2>
+        <form action="./db/site_novo_user.php"  method="post" autocomplete="off">
+          <h2 class="text-center">Crie seu usuário!</h2>
           <div class="form-group pb-3">
-            <label>Usuário</label>
-            <input name="username" type="text" class="form-control" >
+            <label>Digite seu nome</label>
+            <input name="nome" type="text" class="form-control" >
+          </div>
+          <div class="form-group pb-3">
+            <label>Crie um Username</label>
+            <input name="usuario" type="text" class="form-control" >
           </div>
           <div class="form-group pb-4">
-            <label>Senha</label>
-            <input name="password" type="password" class="form-control pass_style" placeholder="*************">
+            <label>Crie sua senha</label>
+            <input name="senha" type="password" class="form-control pass_style" placeholder="*********">
           </div>
-          <button type="submit" id="sendlogin" class="btn btn-primary w-100">login</button>
-          <p class="text-center pt-4">Não possui uma conta? <a href="register.php">Cadastre-se</a></p>
+          <button type="submit" id="sendlogin" class="btn btn-primary w-100">Criar Usuário</button>
         </form>
       </div>
     </div>
