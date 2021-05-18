@@ -18,16 +18,49 @@
 
 <body>
   <?php
-     session_start();
+    session_start();
+    $records = [];
+    
+    include("./dados_de_conexao.php");
 
-     function finalizarSessao() {
-       session_destroy();
-       header("location: ./login.php");
-     }
-
-     if (isset($_GET['sair'])) {
-       finalizarSessao();
-     }
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Headers: *");
+    
+    $conexao = mysqli_connect($hostname,$username,$password,$database);
+    if (mysqli_connect_errno()) {
+    	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    	exit();
+    }
+    
+    $rows = array();
+    $comando  = 'SELECT `pontuacoes`.*, `usuarios`.name FROM `pontuacoes` INNER JOIN `usuarios` ON `pontuacoes`.id_usuario = `usuarios`.id ORDER BY  `pontuacoes`.total desc ';
+    $resultado = mysqli_query($conexao,$comando);
+    if (mysqli_fetch_array($resultado)){
+            while($row = mysqli_fetch_array($resultado)) {
+                array_push($rows,$row);
+            }
+            
+            $records = $rows;
+            
+            mysqli_free_result($resultado);
+            mysqli_close($conexao);
+    
+    } else {
+    
+            echo "nao deu certo";
+            mysqli_free_result($resultado);
+            mysqli_close($conexao);
+    }
+     
+    
+    function finalizarSessao() {
+        session_destroy();
+        header("location: ./login.php");
+    }
+    
+    if (isset($_GET['sair'])) {
+        finalizarSessao();
+    }
   ?>
   <!-- Navigation -->
   <header>
@@ -88,29 +121,19 @@
             et dolore magna aliquyam erat.</p>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-md">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th  width="85%" scope="col" class="table-radius-left">Usuário</th>
-                <th scope="col" class="table-radius-right">Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row" class="table-radius-left">Mark</td>
-                <td class="table-radius-right">2.574.541.859</td>
-              </tr>
-              <tr>
-                <td scope="row" class="table-radius-left">Jacob</td>
-                <td class="table-radius-right">1.235.448.955</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      
+      <?php 
+       if($records != null){
+           echo '<div class="row"> <div class="col-md"> <table class="table table-hover"> <thead> <tr> <th  width="85%" scope="col" class="table-radius-left">Nome do Jogador</th> <th scope="col" class="table-radius">Inimigos Derrotados</th> <th scope="col" class="table-radius-right">Pontuacao Total</th> </tr> </thead> <tbody>';
+           foreach($records as $record){
+               
+               echo '<tr> <td scope="row" class="table-radius-left">'.$record['name'] .'</td> <td class="table-radius">'.$record['inimigos_derrotados'] .'</td> <td class="table-radius-right">'.$record['total'] .'</td> </tr>';
+               
+           }
+           echo '</tbody> </table> </div> </div>';
+           echo '<div>'.$records['name'].'</div>' ;
+       }
+     ?>
 
       <div class="row py-5">
         <div class="col-md-8">
