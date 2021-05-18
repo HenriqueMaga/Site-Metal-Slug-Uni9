@@ -41,8 +41,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.php">PÃ¡gina inicial
-              </a>
+              <a class="nav-link active" href="index.php">Página inicial</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="download.php">Download</a>
@@ -82,7 +81,7 @@
         <div class="col-lg-6 py-5">
           <h6>O Desafio estÃ¡ LanÃ§ado!</h6>
           <h1 class="pt-2">Metal Slug - Uni9 Edition</h1>
-          <p class="pt-4">Prove o seu valor nessa versÃ£o elaborada para o projeto de Jogos Digitais da Uninove!</p>
+          <p class="pt-4">Prove o seu valor nessa versão elaborada para o projeto de Jogos Digitais da Uninove!</p>
         </div>
       </div>
     </div>
@@ -96,8 +95,8 @@
             <div class="card-img-top card-left"></div>
             <div class="card-body">
               <h5 class="card-title">Descubra os Melhores</h5>
-              <p class="card-text">Analise as classficaÃ§Ãµes, esteja entre os campeÃµes!</p>
-              <a href="score_rank.html" class="btn btn-primary">Ver ranking</a>
+              <p class="card-text">Analise as classficações, esteja entre os campeões!</p>
+              <a href="score_rank.php" class="btn btn-primary">Ver ranking</a>
             </div>
           </div>
         </div>
@@ -105,9 +104,9 @@
           <div class="card">
             <div class="card-img-top card-right"></div>
             <div class="card-body">
-              <h5 class="card-title">Os durÃµes vivem mais!</h5>
+              <h5 class="card-title">Os durões vivem mais!</h5>
               <p class="card-text">Veja os jogadores que aguentaram mais tempo</p>
-              <a href="time_rank.html" class="btn btn-primary">Ver ranking</a>
+              <a href="time_rank.php" class="btn btn-primary">Ver ranking</a>
             </div>
           </div>
         </div>
@@ -122,11 +121,11 @@
           <h2>Sobre o projeto</h2>
           <p>
             Esse projeto visa aplicar todos os conhecimentos desenvolvidos ao longo do semestre, que incluem as materias de
-            Jogos Digiatis, ProgramaÃ§Ã£o Web, ComputaÃ§Ã£o GrÃ¡fica e Processamento de Imagens e Qualidade de Software.
+            Jogos Digiatis, Programação Web, Computação Gráfica e Processamento de Imagens e Qualidade de Software.
           </p>
           <p>
-            O jogo foi desenvolvido usando a Engine do Godot, e tem a proposta de recriar parcialmente a experiÃªncia do clÃ¡ssico Metal Slug,
-            utilizando elementos do original, remodelados por nÃ³s.
+            O jogo foi desenvolvido usando a Engine do Godot, e tem a proposta de recriar parcialmente a experiência do clássico Metal Slug,
+            utilizando elementos do original, remodelados por nós.
           </p>
         </div>
         <div class="col-md-6 align-self-center">
@@ -158,4 +157,3 @@
   </footer>
 </body>
 </html>
-		

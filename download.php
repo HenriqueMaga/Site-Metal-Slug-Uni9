@@ -17,17 +17,17 @@
 </head>
 
 <body>
-  <?php
+    <?php
     session_start();
 
-    function finalizarSessao() {
-      session_destroy();
-      header("location: ./login.php");
-    }
+     function finalizarSessao() {
+       session_destroy();
+       header("location: ./login.php");
+     }
 
-    if (isset($_GET['sair'])) {
-      finalizarSessao();
-    }
+     if (isset($_GET['sair'])) {
+       finalizarSessao();
+     }
   ?>
   <!-- Navigation -->
   <header>
