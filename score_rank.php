@@ -117,8 +117,7 @@
       <div class="row py-5">
         <div class="col-md-8">
           <h6>SCORE RANKING</h6>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat.</p>
+          <p>Descubra os grandes campeões, esteja entre os melhores!</p>
         </div>
       </div>
       
@@ -137,15 +136,13 @@
 
       <div class="row py-5">
         <div class="col-md-8">
-          <h2>Como funciona o score?</h2>
+          <h2>Como funcionam as pontuações?</h2>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua.
+            Pontuamos pela quantidade de inimigos derrotados, além disso, cada inimigo também te da pontos, sendo o valor diferente por tipo de inimigo.
+            Isso tudo somado ao tempo de partida te da o total de pontos obtidos!
           </p>
           <p>
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-            duo dolores et ea rebum.
+            Você pode consultar os melhores classificados aqui. Consiga os melhores resultados e seja o número 1!
           </p>
         </div>
       </div>

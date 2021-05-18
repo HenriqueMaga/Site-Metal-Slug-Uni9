@@ -123,7 +123,7 @@
           echo '<button type="submit" id="sendlogin" class="btn btn-primary w-100">Download</button>' ;
         }
       ?>
-      
+      <!--
       <div class="row py-5">
         <div class="col-md-8">
           <h2>Como funciona o score?</h2>
@@ -137,7 +137,7 @@
             duo dolores et ea rebum.
           </p>
         </div>
-      </div>
+      </div>-->
     </div>
   </section>
 

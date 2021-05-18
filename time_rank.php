@@ -117,8 +117,7 @@
       <div class="row py-5">
         <div class="col-md-8">
           <h6>TIME RANKING</h6>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat.</p>
+          <p>Descubra os mais durões. Seja você o mais resistente na batalha!</p>
         </div>
       </div>
 
@@ -137,15 +136,12 @@
 
       <div class="row py-5">
         <div class="col-md-8">
-          <h2>Como funciona o score?</h2>
+          <h2>Como funciona a pontuação por tempo?</h2>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua.
+            Essa classificação é simples. O jogo possui um aumento de dificuldade escalado por tempo, então classificamos os jogadores que duraram mais tempo nas partidas.
           </p>
           <p>
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-            duo dolores et ea rebum.
+            Você pode consultar os melhores classificados aqui. Consiga os melhores resultados e seja o número 1!
           </p>
         </div>
       </div>
