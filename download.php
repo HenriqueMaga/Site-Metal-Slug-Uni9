@@ -120,24 +120,45 @@
       <?php
 
         if($_SESSION["id"] != null){
-          echo '<button type="submit" id="sendlogin" class="btn btn-primary w-100">Download</button>' ;
+          echo ' <div class="col-md-8"><h6>Versão para iMac</h6></div>' ;
+          echo '<a href="https://drive.google.com/file/d/1f7dGOQt5KPFWyag9q1wPRF-cYdMnEPG8/view?usp=sharing" target="_blank"><button type="submit" id="sendlogin" class="btn btn-primary w-100">Download</button></a>' ;
+          echo '<p></p> <div class="col-md-8"><h6>Versão para Windows</h6></div>' ;
+          echo '<a href="https://drive.google.com/file/d/1FyH9nYD828gk_G8SjH846RsQqm3oziUm/view?usp=sharing" target="_blank"><button type="submit" id="sendlogin" class="btn btn-primary w-100">Download</button></a>' ;
         }
       ?>
-      <!--
-      <div class="row py-5">
-        <div class="col-md-8">
-          <h2>Como funciona o score?</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-            duo dolores et ea rebum.
-          </p>
+      <section class="sobre-nos">
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-md-6">
+              <h2>Detalhes sobre o jogo</h2>
+              <p>
+                O jogo possui uma premissa simples: Sobreviva o máximo que puder contra os clássicos inimigos de Metal Slug!
+              </p>
+              <p>
+                Conforme o tempo passa, a quantidade de inimigos surgindo aumenta, mas você contará com a esporádica ajuda da sua Laser Gun para limpar grandes ordas de inimigos!
+              </p>
+            </div>
+            <div class="col-md-6 align-self-center">
+              <img src="./imgs/derrotando-inimigos.png" class="img-fluid" alt="">
+            </div>
+          </div>
         </div>
-      </div>-->
+      </section>
+      <section class="sobre-nos">
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-md-6 align-self-center">
+              <img src="./imgs/tela-game-over.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-6">
+              <h2>Como jogar?</h2>
+              <p>Basta criar uma conta, baixar o arquivo de acordo com o sistema operacional e executar!</p>
+              <p>Você comanda usando as setas direcionais, pula com a barra de espaço e atira com a tecla Z.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </section>
 

@@ -81,7 +81,7 @@
         <div class="col-lg-6 py-5">
           <h6>O Desafio estÃ¡ LanÃ§ado!</h6>
           <h1 class="pt-2">Metal Slug - Uni9 Edition</h1>
-          <p class="pt-4">Prove o seu valor nessa versão elaborada para o projeto de Jogos Digitais da Uninove!</p>
+          <p class="pt-4">Prove o seu valor nessa versão elaborada para o projeto de Sistemas Interaticos</p>
         </div>
       </div>
     </div>
@@ -129,7 +129,7 @@
           </p>
         </div>
         <div class="col-md-6 align-self-center">
-          <img src="./imgs/image.png" class="img-fluid" alt="">
+          <img src="./imgs/jogo-print.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
