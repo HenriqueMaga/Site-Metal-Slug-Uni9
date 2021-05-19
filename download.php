@@ -14,6 +14,7 @@
     crossorigin="anonymous" />
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
@@ -84,7 +85,7 @@
       <div class="row py-5">
         <div class="col-md-8">
           <h6>Baixe agora mesmo!</h6>
-          <p>Desafie seus amigos, obtenha os melhores rankings! Divirta-se nessa releitura simplificada do clássico Metal Slug</p>
+          <p>Desafie seus amigos, obtenha os melhores rankings! Divirta-se nessa releitura simplificada do clássico Metal Slug.</p>
         </div>
       </div>
       <!--
@@ -120,12 +121,28 @@
       <?php
 
         if($_SESSION["id"] != null){
-          echo ' <div class="col-md-8"><h6>Versão para iMac</h6></div>' ;
+          echo ' <div class="col-md-8"><h6>Versão para macOS</h6></div>' ;
           echo '<a href="https://drive.google.com/file/d/1f7dGOQt5KPFWyag9q1wPRF-cYdMnEPG8/view?usp=sharing" target="_blank"><button type="submit" id="sendlogin" class="btn btn-primary w-100">Download</button></a>' ;
-          echo '<p></p> <div class="col-md-8"><h6>Versão para Windows</h6></div>' ;
+          echo '<p></p><br><br> <div class="col-md-8"><h6>Versão para Windows</h6></div>' ;
           echo '<a href="https://drive.google.com/file/d/1FyH9nYD828gk_G8SjH846RsQqm3oziUm/view?usp=sharing" target="_blank"><button type="submit" id="sendlogin" class="btn btn-primary w-100">Download</button></a>' ;
         }
       ?>
+      <br>
+      <section class="sobre-nos">
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-md-6">
+              <p>Acesse o codigo-fonte do Jogo:</p>
+              <p><a class="github-button" href="https://github.com/HenriqueMaga/Metal-Slug-Uni9" data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;" data-size="large" aria-label="Abrir projeto do Jogo">Abrir projeto no Github</a></p>
+            </div>
+            <div class="col-md-6 align-self-center">
+              <p>Acesse o codigo-fonte do Site:</p>
+              <p><a class="github-button" href="https://github.com/HenriqueMaga/Site-Metal-Slug-Uni9" data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;" data-size="large" aria-label="Abrir projeto do Site">Abrir projeto no Github</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section class="sobre-nos">
         <div class="container">
           <div class="row py-5">
