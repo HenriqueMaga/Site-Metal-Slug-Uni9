@@ -20,7 +20,7 @@
    <?php
      session_start();
 
-     if ($_SESSION["id"] != null) {
+    if ($_SESSION["id"] != null) {
       header("location: ./index.php");
     }
 
@@ -70,7 +70,7 @@
             <?php
 
               if($_SESSION["id"] != null){
-                echo '<li class="nav-item"><a class="nav-link">Bem vindo, '.$_SESSION["name"]. '</a></li>' ;
+                echo '<li class="nav-item"><a class="nav-link" href="restrita.php">Bem vindo, '.$_SESSION["name"]. '</a></li>' ;
                 echo '<li class="nav-item"><a class="nav-link" href="index.php?sair=true" >Sair</a></li>' ;
               }
             ?>

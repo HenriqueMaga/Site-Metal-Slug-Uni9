@@ -20,6 +20,10 @@
   <?php
     session_start();
     $records = [];
+
+    if ($_SESSION["id"] == null) {
+      header("location: ./login.php");
+    }
     
     include("./dados_de_conexao.php");
 
@@ -33,7 +37,7 @@
     }
     
     $rows = array();
-    $comando  = 'SELECT `pontuacoes`.*, `usuarios`.name FROM `pontuacoes` INNER JOIN `usuarios` ON `pontuacoes`.id_usuario = `usuarios`.id ORDER BY  `pontuacoes`.total desc ';
+    $comando  = "SELECT `pontuacoes`.*, `usuarios`.name FROM `pontuacoes` INNER JOIN `usuarios` ON `pontuacoes`.id_usuario = `usuarios`.id WHERE `usuarios`.id = '".$_SESSION["id"]."' ORDER BY  `pontuacoes`.total desc ";
     $resultado = mysqli_query($conexao,$comando);
     if (mysqli_fetch_array($resultado)){
             while($row = mysqli_fetch_array($resultado)) {
@@ -85,11 +89,11 @@
             <li class="nav-item">
               <a class="nav-link" href="time_rank.php">Tempo</a>
             </li>
-            
+
             <li class="nav-item">
-              <a class="nav-link active" href="score_rank.php">Score</a>
+              <a class="nav-link" href="score_rank.php">Score</a>
             </li>
-            
+
             <?php 
               if($_SESSION["id"] == null){
                 echo '<li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>';
@@ -99,11 +103,11 @@
             <?php
 
               if($_SESSION["id"] != null){
-                echo '<li class="nav-item"><a class="nav-link" href="restrita.php">Bem vindo, '.$_SESSION["name"]. '</a></li>' ;
+                echo '<li class="nav-item"><a class="nav-link active" href="restrita.php">Bem vindo, '.$_SESSION["name"]. '</a></li>' ;
                 echo '<li class="nav-item"><a class="nav-link" href="index.php?sair=true" >Sair</a></li>' ;
               }
             ?>
-         
+
           </ul>
         </div>
       </div>
@@ -116,10 +120,29 @@
     <div class="container">
       <div class="row py-5">
         <div class="col-md-8">
-          <h6>SCORE RANKING</h6>
-          <p>Descubra os grandes campeões, esteja entre os melhores!</p>
+          <h6>MEUS RANKINGS</h6>
+          <p>Confira todas as suas pontuações!</p>
         </div>
       </div>
+
+      
+      <?php 
+       if($records != null){
+           echo '<div class="row"> <div class="col-md"> <table class="table table-hover"> <thead> <tr> <th  width="85%" scope="col" class="table-radius-left">Nome do Jogador</th> <th scope="col" class="table-radius-right">Segundos de Partida</th> </tr> </thead> <tbody>';
+           foreach($records as $record){
+               
+               echo '<tr> <td scope="row" class="table-radius-left">'.$record['name'] .'</td> <td class="table-radius-right">'.$record['tempo'] .'</td> </tr>';
+               
+           }
+           echo '</tbody> </table> </div> </div>';
+       }
+     ?>
+      
+    </div>
+  </section>
+
+  <section class="score score-rank">
+    <div class="container">
       
       <?php 
        if($records != null){
@@ -130,22 +153,9 @@
                
            }
            echo '</tbody> </table> </div> </div>';
-           echo '<div>'.$records['name'].'</div>' ;
        }
      ?>
 
-      <div class="row py-5">
-        <div class="col-md-8">
-          <h2>Como funcionam as pontuações?</h2>
-          <p>
-            Pontuamos pela quantidade de inimigos derrotados, além disso, cada inimigo também te da pontos, sendo o valor diferente por tipo de inimigo.
-            Isso tudo somado ao tempo de partida te da o total de pontos obtidos!
-          </p>
-          <p>
-            Você pode consultar os melhores classificados aqui. Consiga os melhores resultados e seja o número 1!
-          </p>
-        </div>
-      </div>
     </div>
   </section>
 
