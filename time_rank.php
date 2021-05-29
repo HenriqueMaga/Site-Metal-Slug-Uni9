@@ -36,7 +36,7 @@
     $comando  = 'SELECT `pontuacoes`.*, `usuarios`.name FROM `pontuacoes` INNER JOIN `usuarios` ON `pontuacoes`.id_usuario = `usuarios`.id ORDER BY  `pontuacoes`.total desc ';
     $resultado = mysqli_query($conexao,$comando);
     if (mysqli_fetch_array($resultado)){
-            while($row = mysqli_fetch_array($resultado)) {
+            foreach ($resultado as $row) {
                 array_push($rows,$row);
             }
             
